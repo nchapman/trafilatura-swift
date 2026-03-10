@@ -1,8 +1,6 @@
 // swift-tools-version: 5.9
 import PackageDescription
 
-// This package is populated by CI from trafilatura-rs.
-// See https://github.com/nchapman/trafilatura-rs for details.
 let package = Package(
     name: "Trafilatura",
     platforms: [.macOS(.v12), .iOS(.v15)],
@@ -12,13 +10,16 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "TrafilaturaFFI",
-            url: "https://github.com/nchapman/trafilatura-rs/releases/download/v0.0.0/TrafilaturaFFI.xcframework.zip",
-            checksum: "0000000000000000000000000000000000000000000000000000000000000000"
+            url: "https://github.com/nchapman/trafilatura-rs/releases/download/v0.3.4/TrafilaturaFFI.xcframework.zip",
+            checksum: "dc889cc07cd869250f596931424dc92069b6472a8f4662175072dd98f0230ad3"
         ),
         .target(
             name: "Trafilatura",
             dependencies: ["TrafilaturaFFI"],
-            path: "Sources/Trafilatura"
+            path: "Sources/Trafilatura",
+            linkerSettings: [
+                .linkedFramework("CoreFoundation"),
+            ]
         ),
     ]
 )

@@ -18,9 +18,11 @@ https://github.com/nchapman/trafilatura-swift
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/nchapman/trafilatura-swift", from: "0.3.0"),
+    .package(url: "https://github.com/nchapman/trafilatura-swift", from: "<VERSION>"),
 ]
 ```
+
+Replace `<VERSION>` with the latest release version (see [releases](https://github.com/nchapman/trafilatura-swift/tags)).
 
 Then add `"Trafilatura"` to your target's dependencies.
 
