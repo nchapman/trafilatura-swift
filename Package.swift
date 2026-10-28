@@ -10,8 +10,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "TrafilaturaFFI",
-            url: "https://github.com/nchapman/trafilatura-rs/releases/download/v0.5.0/TrafilaturaFFI.xcframework.zip",
-            checksum: "9f7830a54a45699d26e5293de5af0195296369ec55c0e2edd324f17b7ee147dd"
+            url: "https://github.com/nchapman/trafilatura-rs/releases/download/v0.6.0/TrafilaturaFFI.xcframework.zip",
+            checksum: "56c2d65b9059ba26afc1fc530a09e17e891a22fd24de14704d892dc3abfb94d7"
         ),
         .target(
             name: "Trafilatura",
